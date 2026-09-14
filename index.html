@@ -33,7 +33,7 @@
       </div>
       <p class="lede">Mapas visuais <b>organizados por tema pra você revisar em poucos minutos por dia,</b> sem reler apostila enorme.</p>
       <div class="hero-cta">
-        <a href="#entregaveis" class="btn btn-primary">QUERO MEUS MAPAS →</a>
+        <a href="#previa" class="btn btn-primary">QUERO MEUS MAPAS →</a>
         <ul class="bullets">
           <li>Mapas Visuais</li>
           <li>Informática para Concursos</li>
@@ -72,6 +72,11 @@
       <span class="eyebrow">O formato</span>
       <h2 class="h2" style="margin-top:14px;">Um mapa visual pra cada assunto que mais cai</h2>
     </div>
+    
+    <div class="formato-media">
+        <img src="public/formato.jpg" alt="Mapa visual real — Periféricos Híbridos, com conceito-chave, campos ilustrados, como cai na prova e passo mental">
+    </div>
+
     <div class="formato-body">
       <div class="formato-steps">
         <div class="fstep">
@@ -92,47 +97,7 @@
         </div>
       </div>
 
-      <article class="ficha" id="ficha-firewall-full">
-        <span class="ficha-tab">Firewall</span>
-        <div class="ficha-grid">
-          <div class="fq">
-            <span class="fq-label">① Conceito-chave</span>
-            <p>Sistema que filtra o tráfego entre redes, permitindo ou bloqueando pacotes segundo regras de segurança definidas.</p>
-          </div>
-          <div class="fq">
-            <span class="fq-label">② Campos ilustrados</span>
-            <svg viewBox="0 0 220 110" aria-hidden="true">
-              <defs>
-                <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                  <path d="M0,0 L6,3 L0,6 Z" fill="var(--ink-soft)"></path>
-                </marker>
-              </defs>
-              <rect class="diagram-node" x="6" y="38" width="56" height="34" rx="6"></rect>
-              <text class="diagram-text" x="34" y="59" text-anchor="middle">Internet</text>
-              <path class="diagram-arrow" d="M64,55 H90"></path>
-              <rect class="diagram-node-accent" x="92" y="30" width="52" height="50" rx="8"></rect>
-              <text class="diagram-text-light" x="118" y="59" text-anchor="middle">Firewall</text>
-              <path class="diagram-arrow" d="M146,55 H172"></path>
-              <rect class="diagram-node" x="174" y="38" width="42" height="34" rx="6"></rect>
-              <text class="diagram-text" x="195" y="59" text-anchor="middle">Rede</text>
-              <path class="diagram-alert-line" d="M20,20 L92,42"></path>
-              <text class="diagram-text" x="20" y="14" fill="var(--alert)">pacote bloqueado</text>
-            </svg>
-          </div>
-          <div class="fq">
-            <span class="fq-label">③ Como cai na prova</span>
-            <p>Banca troca "firewall" pela definição de antivírus. <mark class="pegadinha">Firewall filtra tráfego — não detecta nem remove vírus.</mark></p>
-          </div>
-          <div class="fq">
-            <span class="fq-label">④ Passo mental</span>
-            <ul class="checklist">
-              <li>Filtra por regra, não por assinatura</li>
-              <li>Atua na borda da rede</li>
-              <li>Não substitui o antivírus</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+      
     </div>
   </div>
 </section>
@@ -155,7 +120,6 @@
           <div class="handle-grip">⇔</div>
         </div>
       </div>
-      <input type="range" class="compare-range" id="compareRange" min="0" max="100" value="50" aria-label="Comparar apostila e mapa visual">
       <div class="compare-labels"><span>Apostila</span><span>Mapa visual</span></div>
     </div>
     <p class="compare-caption">O conteúdo é o mesmo. A diferença é quem lembra na hora da prova.</p>
@@ -170,152 +134,27 @@
       <h2 class="h2" style="margin-top:14px;">E assim são todos os mapas</h2>
       <p class="lede" style="margin-inline:auto; margin-top:10px;">Nada de amostra montada só <br>pra vender, <b>é o arquivo final.</b></p>
     </div>
-    <div class="previa-grid">
-
-      <article class="ficha ficha--compact">
-        <span class="ficha-tab">Hardware x Software</span>
-        <div class="ficha-grid">
-          <div class="fq">
-            <span class="fq-label">Conceito</span>
-            <p>Hardware é a parte física; software são as instruções que rodam sobre ela.</p>
-          </div>
-          <div class="fq">
-            <svg viewBox="0 0 220 100" aria-hidden="true">
-              <rect class="diagram-node-accent" x="60" y="12" width="100" height="28" rx="6"></rect>
-              <text class="diagram-text-light" x="110" y="30" text-anchor="middle">Software</text>
-              <path class="diagram-arrow" d="M110,66 V44"></path>
-              <rect class="diagram-node" x="50" y="66" width="120" height="26" rx="6"></rect>
-              <text class="diagram-text" x="110" y="83" text-anchor="middle">Hardware</text>
-            </svg>
-          </div>
+    <div class="previa-carousel">
+      <div class="previa-track" id="previaTrack">
+        <div class="previa-slide">
+          <img src="public/e1.jpg" alt="Mapa 02 — Hierarquia e Tipos de Memória" loading="lazy">
         </div>
-        <ul class="checklist" style="margin-top:12px;">
-          <li>Software não existe sem hardware</li>
-          <li>SO fica entre os dois</li>
-        </ul>
-      </article>
-
-      <article class="ficha ficha--compact">
-        <span class="ficha-tab">Segurança · CID</span>
-        <div class="ficha-grid">
-          <div class="fq">
-            <svg viewBox="0 0 220 110" aria-hidden="true">
-              <circle class="diagram-node-accent" cx="110" cy="52" r="20"></circle>
-              <text class="diagram-text-light" x="110" y="55" text-anchor="middle">CID</text>
-              <path class="diagram-arrow" d="M110,32 V14"></path>
-              <path class="diagram-arrow" d="M92,64 L60,86"></path>
-              <path class="diagram-arrow" d="M128,64 L160,86"></path>
-              <text class="diagram-text" x="110" y="10" text-anchor="middle">Confidencialidade</text>
-              <text class="diagram-text" x="40" y="98" text-anchor="middle">Integridade</text>
-              <text class="diagram-text" x="180" y="98" text-anchor="middle">Disponib.</text>
-            </svg>
-          </div>
-          <div class="fq">
-            <span class="fq-label">Pegadinha</span>
-            <p><mark class="pegadinha">Autenticidade e irretratabilidade não fazem parte do tripé CID.</mark></p>
-          </div>
+        <div class="previa-slide">
+          <img src="public/e3.jpg" alt="Mapa 13 — Criptografia" loading="lazy">
         </div>
-      </article>
-
-      <article class="ficha ficha--compact">
-        <span class="ficha-tab">Excel · Fórmulas</span>
-        <div class="ficha-grid">
-          <div class="fq">
-            <svg viewBox="0 0 220 100" aria-hidden="true">
-              <rect class="diagram-node" x="10" y="10" width="60" height="24"></rect>
-              <rect class="diagram-node" x="70" y="10" width="60" height="24"></rect>
-              <rect class="diagram-node-accent" x="130" y="10" width="80" height="24"></rect>
-              <text class="diagram-text-light" x="170" y="26" text-anchor="middle">=SOMA(B2:B9)</text>
-              <rect class="diagram-node" x="10" y="34" width="60" height="24"></rect>
-              <rect class="diagram-node" x="70" y="34" width="60" height="24"></rect>
-              <rect class="diagram-node" x="130" y="34" width="80" height="24"></rect>
-              <rect class="diagram-node" x="10" y="58" width="60" height="24"></rect>
-              <rect class="diagram-node" x="70" y="58" width="60" height="24"></rect>
-              <rect class="diagram-node" x="130" y="58" width="80" height="24"></rect>
-            </svg>
-          </div>
-          <div class="fq">
-            <span class="fq-label">Pegadinha</span>
-            <p><mark class="pegadinha">SOMASE exige critério; SOMA soma tudo no intervalo.</mark></p>
-          </div>
+        <div class="previa-slide">
+          <img src="public/e4.jpg" alt="Mapa 16 — Abrangência de Rede" loading="lazy">
         </div>
-      </article>
-
-      <article class="ficha ficha--compact">
-        <span class="ficha-tab">Atalhos</span>
-        <div class="ficha-grid">
-          <div class="fq">
-            <svg viewBox="0 0 220 90" aria-hidden="true">
-              <rect class="diagram-node" x="20" y="24" width="60" height="40" rx="8"></rect>
-              <text class="diagram-text" x="50" y="48" text-anchor="middle">Ctrl</text>
-              <text class="diagram-text" x="98" y="48" text-anchor="middle">+</text>
-              <rect class="diagram-node-accent" x="118" y="24" width="40" height="40" rx="8"></rect>
-              <text class="diagram-text-light" x="138" y="48" text-anchor="middle">Z</text>
-            </svg>
-          </div>
-          <div class="fq">
-            <span class="fq-label">Conceito</span>
-            <p>Ctrl+Z desfaz; Ctrl+Y (ou Ctrl+Shift+Z) refaz a ação.</p>
-          </div>
+        <div class="previa-slide">
+          <img src="public/e5.jpg" alt="Mapa 18 — Ambientes de Rede" loading="lazy">
         </div>
-      </article>
-
-      <article class="ficha ficha--compact">
-        <span class="ficha-tab">Redes · OSI</span>
-        <div class="ficha-grid">
-          <div class="fq">
-            <svg viewBox="0 0 220 100" aria-hidden="true">
-              <rect class="diagram-node-accent" x="20" y="6" width="180" height="20" rx="4"></rect>
-              <text class="diagram-text-light" x="110" y="20" text-anchor="middle">Aplicação</text>
-              <rect class="diagram-node" x="20" y="30" width="180" height="20" rx="4"></rect>
-              <text class="diagram-text" x="110" y="44" text-anchor="middle">Transporte</text>
-              <rect class="diagram-node" x="20" y="54" width="180" height="20" rx="4"></rect>
-              <text class="diagram-text" x="110" y="68" text-anchor="middle">Rede</text>
-              <rect class="diagram-node" x="20" y="78" width="180" height="18" rx="4"></rect>
-              <text class="diagram-text" x="110" y="91" text-anchor="middle">Enlace</text>
-            </svg>
-          </div>
-          <div class="fq">
-            <span class="fq-label">Pegadinha</span>
-            <p><mark class="pegadinha">Banca inverte a ordem das camadas de propósito.</mark></p>
-          </div>
+        <div class="previa-slide">
+          <img src="public/e6.jpg" alt="Mapa 19 — Equipamentos de Rede" loading="lazy">
         </div>
-      </article>
-
-      <article class="ficha ficha--compact">
-        <span class="ficha-tab">Malware</span>
-        <div class="ficha-grid">
-          <div class="fq">
-            <span class="fq-label">Conceito</span>
-            <p>Vírus precisa de um hospedeiro; worm se propaga sozinho pela rede.</p>
-          </div>
-          <div class="fq">
-            <span class="fq-label">Como cai na prova</span>
-            <p><mark class="pegadinha">Ransomware sequestra e cobra resgate — não é o mesmo que spyware.</mark></p>
-          </div>
+        <div class="previa-slide">
+          <img src="public/e7.jpg" alt="Mapa 21 — Protocolos de Navegação e Arquivos" loading="lazy">
         </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ ENTREGAVEIS CAROUSEL ============ -->
-<section class="band" id="entregaveis">
-  <div class="wrap">
-    <div class="carousel-head">
-      <div>
-        <span class="eyebrow">O que vem no acesso</span>
-        <h2 class="h2" style="margin-top:14px;">Veja tudo o que vem no seu acesso</h2>
       </div>
-      <div class="carousel-nav">
-        <button class="cnav-btn" id="carPrev" aria-label="Anterior">←</button>
-        <button class="cnav-btn" id="carNext" aria-label="Próximo">→</button>
-      </div>
-    </div>
-    <div class="carousel-track" id="carTrack"></div>
-    <div class="carousel-cta">
-      <a href="#oferta" class="btn btn-primary">QUERO VER A OFERTA COMPLETA →</a>
     </div>
   </div>
 </section>
@@ -345,68 +184,40 @@
 <!-- ============ CENAS ============ -->
 <section class="band" id="cenas">
   <div class="wrap">
-    <span class="eyebrow">No dia a dia</span>
-    <h2 class="h2" style="margin-top:14px;">Onde o mapa entra na sua rotina</h2>
-    <p class="drag-hint">⇄ arraste pra ver</p>
+    <div style="text-align:center;">
+      <span class="eyebrow" style="justify-content:center;">No dia a dia</span>
+      <h2 class="h2" style="margin-top:14px;">Onde o mapa entra na sua rotina</h2>
+    </div>
     <div class="cenas-scroller" id="cenasScroller">
       <div class="cena">
         <div class="cena-art">
-          <svg viewBox="0 0 260 195" aria-hidden="true">
-            <rect width="260" height="195" fill="var(--paper-deep)"></rect>
-            <rect x="30" y="120" width="200" height="14" rx="4" fill="var(--ink)" opacity=".15"></rect>
-            <rect x="60" y="60" width="140" height="60" rx="6" fill="var(--card)" stroke="var(--line)"></rect>
-            <rect x="72" y="70" width="60" height="8" rx="2" fill="var(--accent)"></rect>
-            <rect x="72" y="84" width="100" height="6" rx="2" fill="var(--line)"></rect>
-            <rect x="72" y="96" width="80" height="6" rx="2" fill="var(--line)"></rect>
-            <circle cx="215" cy="55" r="22" fill="var(--accent)" opacity=".55"></circle>
-            <rect x="205" y="70" width="20" height="34" rx="4" fill="var(--ink-soft)"></rect>
-          </svg>
+          <img src="public/content%20(2)%201.jpg" alt="Estudando à noite com o mapa visual sobre a mesa, luminária acesa" loading="lazy">
         </div>
-        <p>Estudando à noite, depois do expediente, com a ficha impressa na mesa.</p>
+        <p>Estudando à noite, depois do expediente, com o mapa na mesa.</p>
       </div>
       <div class="cena">
         <div class="cena-art">
-          <svg viewBox="0 0 260 195" aria-hidden="true">
-            <rect width="260" height="195" fill="var(--paper-deep)"></rect>
-            <rect x="24" y="30" width="80" height="150" rx="10" fill="var(--ink)"></rect>
-            <rect x="30" y="42" width="68" height="118" rx="4" fill="var(--card)"></rect>
-            <rect x="38" y="52" width="30" height="6" rx="2" fill="var(--accent)"></rect>
-            <rect x="38" y="64" width="52" height="6" rx="2" fill="var(--line)"></rect>
-            <rect x="38" y="76" width="40" height="6" rx="2" fill="var(--line)"></rect>
-            <path d="M150 170 L150 60 Q150 40 175 40 L220 40" stroke="var(--line)" stroke-width="10" fill="none"></path>
-            <circle cx="150" cy="178" r="10" fill="var(--ink-soft)"></circle>
-          </svg>
+          <img src="public/content%20(1)%201.jpg" alt="Revisando o mapa no tablet em pé, dentro do ônibus" loading="lazy">
         </div>
-        <p>Revisando no celular em pé, no ônibus ou no trajeto.</p>
+        <p>Revisando no tablet em pé, no ônibus ou no trajeto.</p>
       </div>
       <div class="cena">
         <div class="cena-art">
-          <svg viewBox="0 0 260 195" aria-hidden="true">
-            <rect width="260" height="195" fill="var(--paper-deep)"></rect>
-            <rect x="30" y="20" width="200" height="140" rx="6" fill="var(--card)" stroke="var(--line)"></rect>
-            <rect x="48" y="38" width="60" height="46" rx="4" fill="var(--card)" stroke="var(--accent-deep)" stroke-width="2"></rect>
-            <rect x="118" y="38" width="60" height="46" rx="4" fill="var(--card)" stroke="var(--line)"></rect>
-            <rect x="48" y="94" width="60" height="46" rx="4" fill="var(--card)" stroke="var(--line)"></rect>
-            <rect x="118" y="94" width="60" height="46" rx="4" fill="var(--card)" stroke="var(--accent-deep)" stroke-width="2"></rect>
-            <text x="78" y="66" text-anchor="middle" class="diagram-text" fill="var(--accent-deep)">✓</text>
-            <text x="148" y="122" text-anchor="middle" class="diagram-text" fill="var(--accent-deep)">✓</text>
-          </svg>
+          <img src="public/content%201.jpg" alt="Mapas visuais impressos e colados na parede, sendo marcados como revisados" loading="lazy">
         </div>
-        <p>Folha na parede do quarto, marcando o que já revisou.</p>
+        <p>Mapas na parede do quarto, marcando o que já revisou.</p>
       </div>
       <div class="cena">
         <div class="cena-art">
-          <svg viewBox="0 0 260 195" aria-hidden="true">
-            <rect width="260" height="195" fill="var(--paper-deep)"></rect>
-            <ellipse cx="130" cy="150" rx="90" ry="14" fill="var(--ink)" opacity=".08"></ellipse>
-            <rect x="70" y="70" width="120" height="16" rx="8" fill="var(--card)" stroke="var(--line)"></rect>
-            <path d="M60 108 a30 22 0 0 1 60 0 z" fill="var(--ink-soft)"></path>
-            <rect x="55" y="108" width="70" height="30" rx="6" fill="var(--ink-soft)"></rect>
-            <rect x="140" y="94" width="60" height="44" rx="4" fill="var(--card)" stroke="var(--accent-deep)" stroke-width="2"></rect>
-            <rect x="148" y="104" width="30" height="6" rx="2" fill="var(--accent)"></rect>
-          </svg>
+          <img src="public/content%20(3)%201.jpg" alt="Revisando o mapa no tablet durante o intervalo do treino, ao ar livre" loading="lazy">
         </div>
-        <p>Puxando o mapa no intervalo do trabalho.</p>
+        <p>Revisando no intervalo do treino, ao ar livre.</p>
+      </div>
+      <div class="cena">
+        <div class="cena-art">
+          <img src="public/content%20(4)%201.jpg" alt="Revisando o mapa no celular a caminho de algum lugar, na rua" loading="lazy">
+        </div>
+        <p>Puxando o mapa no celular a caminho de qualquer lugar.</p>
       </div>
     </div>
   </div>
@@ -481,30 +292,66 @@
     <div style="text-align:center;">
       <span class="eyebrow" style="justify-content:center;">A oferta</span>
       <h2 class="h2" style="margin-top:14px;">Somando item por item</h2>
+      <p class="lede" style="margin-top:10px; margin-inline:auto;">Pagamento único. Sem mensalidade e sem assinatura.</p>
     </div>
     <div class="oferta-card">
+      <ul class="oferta-list">
+        <li>
+          <span class="check-ok">✓</span>
+          <span class="oferta-item"><strong>Mapa Visual de Informática para Concursos</strong><span class="oferta-sub">50 mapas</span></span>
+          <span class="oferta-price"><s>R$97,00</s></span>
+        </li>
+        <li>
+          <span class="check-ok">✓</span>
+          <span class="oferta-item"><strong>Bônus 1</strong><span class="oferta-sub">100 Questões de Informática + Gabarito</span></span>
+          <span class="oferta-price"><s>R$27,00</s></span>
+        </li>
+        <li>
+          <span class="check-ok">✓</span>
+          <span class="oferta-item"><strong>Bônus 2</strong><span class="oferta-sub">Checklist de Informática</span></span>
+          <span class="oferta-price"><s>R$17,00</s></span>
+        </li>
+        <li>
+          <span class="check-ok">✓</span>
+          <span class="oferta-item"><strong>Bônus 3</strong><span class="oferta-sub">Ficha de Revisão Pré-Prova</span></span>
+          <span class="oferta-price"><s>R$19,00</s></span>
+        </li>
+        <li>
+          <span class="check-ok">✓</span>
+          <span class="oferta-item"><strong>Bônus 4</strong><span class="oferta-sub">Atalhos Essenciais</span></span>
+          <span class="oferta-price"><s>R$15,00</s></span>
+        </li>
+        <li>
+          <span class="check-ok">✓</span>
+          <span class="oferta-item"><strong>Acesso vitalício</strong><span class="oferta-sub">seu pra sempre, sem mensalidade</span></span>
+        </li>
+      </ul>
+      <div class="oferta-total">
+        <span>Valor total</span>
+        <span class="oferta-total-price"><s>R$175,00</s></span>
+      </div>
+    </div>
+
+    <div class="oferta-final-card">
       <div class="oferta-media">
         <img src="public/price.png" alt="Mapa Visual de Informática para Concursos e os 4 bônus inclusos">
       </div>
-      <div class="oferta-details">
-        <table class="stack-table">
-          <tbody>
-            <tr><td>Mapa Visual de Informática para Concursos (50 mapas)</td><td>R$97,00</td></tr>
-            <tr><td>Bônus 1: 100 Questões de Informática + Gabarito</td><td>R$27,00</td></tr>
-            <tr><td>Bônus 2: Checklist de Informática</td><td>R$17,00</td></tr>
-            <tr><td>Bônus 3: Ficha de Revisão Pré-Prova</td><td>R$19,00</td></tr>
-            <tr><td>Bônus 4: Atalhos Essenciais</td><td>R$15,00</td></tr>
-            <tr class="total"><td>Valor total</td><td>R$175,00</td></tr>
-          </tbody>
-        </table>
-        <div class="price-block">
-          <div class="price-final">
-            <span class="old">De R$175,00 por</span>
-            <span class="now">R$19,90 <small>à vista</small></span>
-            <span class="cash">pagamento único · sem mensalidade</span>
-          </div>
-          <a href="#cta-final" class="btn btn-primary">QUERO MEUS MAPAS →</a>
+      <span class="oferta-tag">Pacote completo</span>
+      <p class="oferta-final-sub">Informática completa pra concurso <b>(+ R$78 em bônus grátis)</b></p>
+      <ul class="check-list oferta-final-list">
+        <li><span class="check-ok">✓</span>Mapa Visual de Informática para Concursos (50 mapas)</li>
+        <li><span class="check-ok">✓</span>Bônus 01: 100 Questões de Informática + Gabarito</li>
+        <li><span class="check-ok">✓</span>Bônus 02: Checklist de Informática</li>
+        <li><span class="check-ok">✓</span>Bônus 03: Ficha de Revisão Pré-Prova</li>
+        <li><span class="check-ok">✓</span>Bônus 04: Atalhos Essenciais</li>
+        <li><span class="check-ok">✓</span>Acesso vitalício, sem mensalidade</li>
+      </ul>
+      <div class="price-block">
+        <div class="price-final">
+          <span class="old">De R$175,00 por só</span>
+          <span class="now">R$19,90 <small>à vista</small></span>
         </div>
+        <a href="https://mundoconhecimento.mycartpanda.com/checkout/182650613:1" class="btn btn-primary btn-block">QUERO O PACOTE COMPLETO →</a>
       </div>
     </div>
   </div>
@@ -580,7 +427,7 @@
     <h2 style="margin-top:14px;">A prova não espera.<br>A revisão certa <br>fica com você.</h2>
     <p class="lede" style="margin-top:14px;">50 mapas visuais + 4 bônus, <br>por R$19,90 à vista.</p>
     <div class="cta-final-actions">
-      <a href="#oferta" class="btn btn-primary">QUERO MEUS MAPAS →</a>
+      <a href="https://mundoconhecimento.mycartpanda.com/checkout/182650613:1" class="btn btn-primary">QUERO MEUS MAPAS →</a>
       <span class="cta-final-meta">Acesso imediato · Pagamento único · Garantia de 7 dias</span>
     </div>
   </div>
