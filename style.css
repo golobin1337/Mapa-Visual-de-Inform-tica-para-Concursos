@@ -90,18 +90,21 @@ section{padding-block:76px;}
 .band{background:var(--paper-deep); border-block:1px solid var(--line);}
 
 /* ---------- HERO ---------- */
-.hero{padding-block:64px 72px;}
+.hero{padding-block:56px 72px;}
 .hero-grid{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:48px;
+  display:flex;
+  flex-direction:column;
   align-items:center;
+  text-align:center;
+  gap:0;
+  max-width:640px;
+  margin-inline:auto;
 }
-.hero h1{font-size:clamp(2rem,4.4vw,3rem); line-height:1.1; margin-top:14px;}
-.hero .lede{margin-top:16px; font-size:1.15rem;}
-.hero-cta{margin-top:30px; display:flex; flex-direction:column; align-items:flex-start; gap:18px;}
+.hero h1{font-size:clamp(1.8rem,4.1vw,2.8rem); line-height:1.13; margin-top:14px;}
+.hero .lede{margin-top:16px; font-size:1.15rem; margin-inline:auto;}
+.hero-cta{margin-top:30px; display:flex; flex-direction:column; align-items:center; gap:18px;}
 .bullets{
-  display:flex; flex-wrap:wrap; gap:10px 22px;
+  display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px;
   font-family:'IBM Plex Mono', monospace;
   font-size:.78rem;
   color:var(--ink-soft);
@@ -109,63 +112,10 @@ section{padding-block:76px;}
 }
 .bullets li{list-style:none; display:flex; align-items:center; gap:7px;}
 .bullets li::before{content:"◆"; color:var(--accent-deep); font-size:.6rem;}
-@media (max-width:860px){
-  .hero-grid{grid-template-columns:1fr; gap:40px; text-align:center;}
-  .hero .eyebrow, .hero .lede{margin-inline:auto;}
-  .hero-cta{align-items:center;}
-  .bullets{justify-content:center;}
-}
 
-/* fan of ficha cards + phone mockup */
-.hero-art{position:relative; min-height:420px; display:flex; align-items:center; justify-content:center;}
-.fan{position:relative; width:230px; height:300px;}
-.fan-card{
-  position:absolute; inset:0; margin:auto;
-  width:190px; height:260px;
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:14px;
-  box-shadow:var(--shadow-sm);
-  padding:16px;
-  transform-origin:bottom center;
-}
-.fan-card:nth-child(1){transform:rotate(-13deg) translateX(-46px);}
-.fan-card:nth-child(2){transform:rotate(-3deg) translateX(-12px);}
-.fan-card:nth-child(3){transform:rotate(9deg) translateX(28px);}
-.fan-tab{
-  font-family:'IBM Plex Mono',monospace;
-  font-size:.62rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
-  color:var(--accent-deep); background:var(--accent); opacity:.18;
-  border-radius:6px; padding:4px 8px; display:inline-block; margin-bottom:10px;
-}
-.fan-card .fan-title{font-family:'Fraunces',serif; font-weight:700; font-size:1rem; margin-bottom:8px;}
-.fan-line{height:7px; border-radius:4px; background:var(--line); margin-bottom:7px;}
-.fan-line.w70{width:70%;} .fan-line.w90{width:90%;} .fan-line.w50{width:50%;}
-.fan-block{height:46px; border-radius:8px; background:var(--paper-deep); margin-top:10px; border:1px dashed var(--line);}
-
-.phone{
-  position:absolute; right:-6px; bottom:-26px;
-  width:150px; height:300px;
-  background:var(--ink);
-  border-radius:26px;
-  padding:8px;
-  box-shadow:var(--shadow);
-}
-.phone-screen{
-  background:var(--card);
-  width:100%; height:100%;
-  border-radius:19px;
-  overflow:hidden;
-  padding:12px 10px;
-  display:flex; flex-direction:column; gap:7px;
-}
-.phone-notch{position:absolute; top:8px; left:50%; transform:translateX(-50%); width:44px; height:5px; background:var(--ink); border-radius:4px; opacity:.5;}
-.phone-tag{font-family:'IBM Plex Mono',monospace; font-size:.5rem; font-weight:700; color:var(--accent-deep); text-transform:uppercase; letter-spacing:.06em;}
-.phone-title{font-family:'Fraunces',serif; font-weight:700; font-size:.72rem; color:var(--ink);}
-.phone-mini{background:var(--paper-deep); border-radius:6px; height:34px; border:1px solid var(--line);}
-.phone-mini.tall{height:52px;}
-.phone-check{font-size:.5rem; color:var(--ink-soft); display:flex; gap:5px; align-items:center;}
-.phone-check::before{content:"✓"; color:var(--accent-deep); font-weight:700;}
+/* hero mockup image */
+.hero-art{width:100%; display:flex; align-items:center; justify-content:center; margin-top:28px;}
+.hero-mockup{width:100%; max-width:420px; height:auto; display:block;}
 
 /* ---------- DOR ---------- */
 .dor-list{list-style:none; margin:34px 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:14px 28px;}
@@ -332,8 +282,8 @@ mark.pegadinha{
 .carousel-cta{margin-top:34px; text-align:center;}
 
 /* ---------- PACOTE ---------- */
-.pacote-grid{margin-top:40px; display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;}
-@media (max-width:860px){ .pacote-grid{grid-template-columns:1fr;} }
+.pacote-grid{margin-top:40px; max-width:640px; margin-inline:auto;}
+#pacote-title{font-size:clamp(1.35rem,6.2vw,2.1rem);}
 .check-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px;}
 .check-list li{display:flex; gap:12px; align-items:flex-start; font-size:1rem;}
 .check-ok{
@@ -346,8 +296,8 @@ mark.pegadinha{
   background:var(--paper-deep); border-radius:0 10px 10px 0;
   font-family:'Fraunces',serif; font-weight:600; font-size:1.02rem;
 }
-.pacote-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow-sm); padding:26px;}
-.pacote-card .fq{margin-bottom:12px;}
+.pacote-card{display:flex; align-items:center; justify-content:center; margin-top:28px; margin-bottom:28px;}
+.pacote-mockup{width:100%; max-width:480px; height:auto; display:block;}
 
 /* ---------- CENAS ---------- */
 .cenas-scroller{
