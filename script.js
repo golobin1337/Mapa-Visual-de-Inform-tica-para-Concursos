@@ -1,5 +1,7 @@
 (function(){
   // ---------- infinite auto-scroll marquee (used by "A prévia" e "Onde o mapa entra na rotina") ----------
+  // Moves the track with a CSS transform (not scrollLeft) so it works regardless
+  // of the viewport's overflow/scroll behavior.
   function autoCarousel(track, speed, gap){
     if(!track) return;
     var setWidth = 0;
@@ -7,7 +9,7 @@
       var slides = track.children.length / 2;
       setWidth = 0;
       for(var i = 0; i < slides; i++){
-        setWidth += track.children[i].offsetWidth + gap;
+        setWidth += track.children[i].getBoundingClientRect().width + gap;
       }
     }
     // duplicate the slide set once so the loop can wrap seamlessly
@@ -17,13 +19,13 @@
     measure();
     window.addEventListener('resize', measure);
 
+    var offset = 0;
     var paused = false;
     function tick(){
       if(!paused && setWidth > 0){
-        track.scrollLeft += speed;
-        if(track.scrollLeft >= setWidth){
-          track.scrollLeft -= setWidth;
-        }
+        offset += speed;
+        if(offset >= setWidth) offset -= setWidth;
+        track.style.transform = 'translateX(' + (-offset) + 'px)';
       }
       requestAnimationFrame(tick);
     }
