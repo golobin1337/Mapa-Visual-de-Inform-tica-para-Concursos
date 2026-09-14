@@ -253,7 +253,7 @@ mark.pegadinha{
   display:flex; gap:20px; width:max-content; will-change:transform;
 }
 .previa-slide{
-  flex:none; width:240px;
+  flex:none; width:300px;
   background:var(--card); border:1px solid var(--line); border-radius:14px;
   overflow:hidden; box-shadow:var(--shadow-sm); user-select:none;
 }
