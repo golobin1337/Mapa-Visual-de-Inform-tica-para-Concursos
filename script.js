@@ -1,44 +1,43 @@
 (function(){
   // ---------- data for entregaveis carousel ----------
   var mapas = [
-    "Microcomputador: Componentes e Periféricos","Hardware e Periféricos","Dispositivos de Entrada e Saída",
-    "Impressoras e Periféricos","Sistemas de Numeração e Unidades de Medida","Sistema Operacional Windows",
-    "Sistema Operacional Linux","Editor de Texto (Word)","Formatação e Estilos no Word",
-    "Planilhas Eletrônicas (Excel)","Fórmulas e Funções no Excel","Gráficos e Tabelas Dinâmicas",
-    "Apresentações (PowerPoint)","LibreOffice Writer","LibreOffice Calc","LibreOffice Impress",
-    "Redes de Computadores","Modelo OSI e TCP/IP","Topologias de Rede","Internet e Intranet",
-    "Navegadores de Internet","Correio Eletrônico","Protocolos de E-mail (POP3, IMAP, SMTP)",
-    "Computação em Nuvem","Armazenamento em Nuvem","Segurança da Informação","Princípios CID",
-    "Malwares e Pragas Virtuais","Vírus, Worms e Trojans","Ransomware e Spyware",
-    "Firewall e Criptografia","Certificado e Assinatura Digital","Backup e Recuperação de Dados",
-    "Tipos de Backup","Banco de Dados — Conceitos","Modelo Relacional","Atalhos — Windows",
-    "Atalhos — Word e Excel","LGPD — Noções Gerais","Governança de TI",
-    "Compressão de Arquivos (ZIP/RAR)","Extensões de Arquivo","Manutenção Preventiva de Computadores",
-    "Redes Sociais e Ferramentas Colaborativas","Aplicativos de Mensagens e Videoconferência",
-    "Atualizações e Patches de Segurança","Autenticação e Senhas Seguras","Phishing e Engenharia Social",
-    "Termos e Conceitos Gerais de Informática","Tendências em TI para Concursos"
+    {img:"e1.jpg", num:"02", modulo:"Hardware, Software e Periféricos", t:"Hierarquia e Tipos de Memória"},
+    {img:"e2.jpg", num:"05", modulo:"Hardware, Software e Periféricos", t:"Periféricos Híbridos"},
+    {img:"e3.jpg", num:"13", modulo:"Segurança da Informação", t:"Criptografia"},
+    {img:"e4.jpg", num:"16", modulo:"Redes, Internet e Nuvem", t:"Abrangência de Rede: PAN x LAN x MAN x WAN"},
+    {img:"e5.jpg", num:"18", modulo:"Redes, Internet e Nuvem", t:"Ambientes de Rede: Internet x Intranet x Extranet"},
+    {img:"e6.jpg", num:"19", modulo:"Redes, Internet e Nuvem", t:"Equipamentos de Rede: Hub x Switch x Roteador x Modem"},
+    {img:"e7.jpg", num:"21", modulo:"Redes, Internet e Nuvem", t:"Protocolos de Navegação e Arquivos"}
   ];
   var bonus = [
-    {t:"100 Questões + Gabarito", i:"📝"},
-    {t:"Checklist de Informática", i:"☑️"},
-    {t:"Ficha de Revisão Pré-Prova", i:"⏱️"},
-    {t:"Atalhos Essenciais", i:"⌨️"}
+    {img:"BONUS 1.jpg", t:"100 Questões + Gabarito"},
+    {img:"BONUS 2.jpg", t:"Checklist de Informática"},
+    {img:"BONUS 3.jpg", t:"Ficha de Revisão Pré-Prova"},
+    {img:"BONUS 4.jpg", t:"Atalhos Essenciais"}
   ];
   var track = document.getElementById('carTrack');
   var frag = document.createDocumentFragment();
-  mapas.forEach(function(m, idx){
+  mapas.forEach(function(m){
     var el = document.createElement('div');
     el.className = 'cslide';
-    el.innerHTML = '<div class="cicon">🗂️</div><span class="cnum">Mapa '+String(idx+1).padStart(2,'0')+'</span><h4>'+m+'</h4>';
+    el.innerHTML =
+      '<div class="cslide-media"><img src="public/'+encodeURIComponent(m.img)+'" alt="Mapa '+m.num+' — '+m.t+'" loading="lazy"></div>'+
+      '<div class="cslide-body"><span class="cnum">Mapa '+m.num+' · '+m.modulo+'</span><h4>'+m.t+'</h4></div>';
     frag.appendChild(el);
   });
   bonus.forEach(function(b, idx){
     var el = document.createElement('div');
     el.className = 'cslide is-bonus';
-    el.innerHTML = '<div class="cicon">'+b.i+'</div><span class="cnum">Bônus '+(idx+1)+'</span><h4>'+b.t+'</h4>';
+    el.innerHTML =
+      '<div class="cslide-media"><img src="public/'+encodeURIComponent(b.img)+'" alt="'+b.t+'" loading="lazy"></div>'+
+      '<div class="cslide-body"><span class="cnum">Bônus '+(idx+1)+'</span><h4>'+b.t+'</h4></div>';
     frag.appendChild(el);
   });
+  var moreEl = document.createElement('div');
+  moreEl.className = 'cslide is-more';
+  moreEl.innerHTML = '<span class="more-num">+43</span><h4>mapas visuais e mais temas dentro do material completo</h4>';
   track.appendChild(frag);
+  track.appendChild(moreEl);
 
   function dragScroll(el){
     var isDown = false, startX, scrollLeft, moved = false;
