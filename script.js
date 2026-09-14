@@ -1,6 +1,5 @@
 (function(){
-  // ---------- infinite auto-scroll marquee (used by "A prévia" and "Onde o mapa entra na rotina") ----------
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // ---------- infinite auto-scroll marquee (used by "A prévia" e "Onde o mapa entra na rotina") ----------
   function autoCarousel(track, speed, gap){
     if(!track) return;
     var setWidth = 0;
@@ -28,11 +27,9 @@
       }
       requestAnimationFrame(tick);
     }
-    if(!reduceMotion){
-      requestAnimationFrame(tick);
-      track.addEventListener('mouseenter', function(){ paused = true; });
-      track.addEventListener('mouseleave', function(){ paused = false; });
-    }
+    requestAnimationFrame(tick);
+    track.addEventListener('mouseenter', function(){ paused = true; });
+    track.addEventListener('mouseleave', function(){ paused = false; });
   }
   autoCarousel(document.getElementById('previaTrack'), 0.35, 20);
   autoCarousel(document.getElementById('cenasScroller'), 0.35, 20);
