@@ -104,17 +104,15 @@ section{padding-block:76px;}
   margin-inline:auto;
 }
 .hero h1{font-size:clamp(1.8rem,4.1vw,2.8rem); line-height:1.13; margin-top:14px;}
-.hero .lede{margin-top:16px; font-size:1.15rem; margin-inline:auto;}
-.hero-cta{margin-top:30px; display:flex; flex-direction:column; align-items:center; gap:18px;}
-.bullets{
-  display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px;
-  font-family:'IBM Plex Mono', monospace;
-  font-size:.78rem;
-  color:var(--ink-soft);
-  padding:0; margin:0;
+.hero h1 .hl{
+  background:var(--accent); color:var(--accent-ink);
+  padding:0 8px; border-radius:6px; box-decoration-break:clone; -webkit-box-decoration-break:clone;
 }
-.bullets li{list-style:none; display:flex; align-items:center; gap:7px;}
-.bullets li::before{content:"◆"; color:var(--accent-deep); font-size:.6rem;}
+.hero .lede{margin-top:16px; font-size:1.15rem; margin-inline:auto;}
+.hero-checklist{
+  margin-top:26px; text-align:left; max-width:460px; margin-inline:auto;
+}
+.hero-cta{margin-top:30px; display:flex; flex-direction:column; align-items:center; gap:18px;}
 
 /* hero mockup image */
 .hero-art{width:100%; display:flex; align-items:center; justify-content:center; margin-top:28px;}
